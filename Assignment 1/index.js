@@ -123,3 +123,80 @@ const isFound = (array, element) => {
 console.log(isFound([1, 2, 3, 4, 5], 3));
 console.log(isFound([1, 2, 3, 4, 5], 10));
  */
+
+/* 
+// 11. Write a function to calculate the factorial of a given number.
+const getFactorial = (num) => {
+    let factorial = 1
+
+    if (num < 0) return "Factorial is not defined";
+    
+    for (let i = 1; i <= num; i++) {
+        factorial *= i
+    }
+
+    return factorial
+}
+
+console.log(getFactorial(5));
+ */
+
+/* 
+// 12. Write a function that takes an object and returns an array
+// containing only its keys.
+const getKeys = (object) => {
+  return Object.keys(object);
+};
+
+console.log(getKeys({ name: "John", age: 30 }));
+ */
+
+/* 
+// 13. Write a function that returns only the unique numbers from an array.
+const getUnique = (array) => {
+  uniqueArray = array.filter((num) => {
+    return array.indexOf(num) === array.lastIndexOf(num);
+  });
+
+  return uniqueArray;
+};
+
+console.log(getUnique([1, 2, 2, 3, 4, 4, 5]));
+ */
+
+// ! 14. Write a function to count the occurrences of each character in a string.
+
+/* 
+// 15. Write a function that sorts an array of numbers in ascending order.
+const orderArray = (array) => {
+    return array.sort()
+}
+
+console.log(orderArray([5, 3, 8, 1, 2]));
+
+ */
+
+/* 
+// 16. Write a function to check if a given string is an anagram of another string
+//  (i.e., contains the same characters in a different order).
+const isAnagram = (word1, word2) => {
+  if (word1.length !== word2.length) return false;
+
+  return word1.split("").sort().join("") === word2.split("").sort().join("")
+    ? true
+    : false;
+};
+
+console.log(isAnagram("listen", "silent"));
+ */
+
+/* 
+// 17. Write a function that removes all falsy values
+// (`false`, `null`, `0`, `""`, `undefined`, and `NaN`) from an array.
+const removeFalsy = (array) => {
+  return array.filter((word) => word);
+};
+
+console.log(removeFalsy([0, false, "Hello", "", null, undefined, NaN, 42]));
+ */
+
