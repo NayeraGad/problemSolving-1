@@ -27,10 +27,10 @@ console.log(isPrim(7));
 
 /* 
 // 3. Write a function to reverse a given string (using built in method).
-const reverse = (word) => {
-    const reversedWord = word.split('').reverse().join('')
+const reverse = (string) => {
+    const reversedString = string.split('').reverse().join('')
 
-    return reversedWord;
+    return reversedString;
 }
 
 console.log(reverse('hello'));  
@@ -63,14 +63,14 @@ console.log(isEven([1, 2, 3, 4, 5, 6]));
 /* 
 //  6. Implement a function to reverse a string without using the built-in 
 //  reverse() method.
-const reverse = (word) => {
-    let reversedWord = ''
+const reverse = (string) => {
+    let reversedString = ''
 
-    for (let i = (word.length - 1); i >= 0; i--) {
-        reversedWord += word[i]
+    for (let i = (string.length - 1); i >= 0; i--) {
+        reversedString += string[i]
     }
 
-    return reversedWord
+    return reversedString
 }
 
 console.log(reverse("route"));
@@ -164,7 +164,21 @@ const getUnique = (array) => {
 console.log(getUnique([1, 2, 2, 3, 4, 4, 5]));
  */
 
-// ! 14. Write a function to count the occurrences of each character in a string.
+/* 
+//  14. Write a function to count the occurrences of each character in a string.
+const countOccurrences = (string) => {
+  let count = {};
+
+  string.toLowerCase().split("").forEach((char) => {
+    !count[char] && (count[char] = 0);
+    count[char]++;
+  });
+
+  return count;
+};
+
+console.log(countOccurrences("hello"));
+ */
 
 /* 
 // 15. Write a function that sorts an array of numbers in ascending order.
@@ -200,3 +214,84 @@ const removeFalsy = (array) => {
 console.log(removeFalsy([0, false, "Hello", "", null, undefined, NaN, 42]));
  */
 
+/* 
+// ?18. Write a function that creates a car object with properties such as
+// ?`model` and `year’ and includes a method to display the car's details.
+const displayDetails = (modal, year) => {
+  const car = {
+    model: modal,
+    year: year,
+  };
+
+  return car;
+};
+
+console.log(displayDetails("Toyota", 2020));
+ */
+
+/* 
+// 19. Write a function that checks if a given object contains a specific property.
+const containProperty = (object, property) => {
+    // return object.property !== undefined ? true : false;
+    return Object.hasOwn(object, property)
+}
+
+console.log(containProperty({ name: "Alice", age: 25 }, "name"));
+console.log(containProperty({ name: "Alice", age: 25 }, "address"));
+
+ */
+
+/* 
+// 20. Write a function to count the number of vowels (a, e, i, o, u) in a string,
+// regardless of case.
+const countVowels = (string) => {
+  const vowels = ["a", "e", "i", "o", "u"];
+
+  const array = string.toLowerCase().split("");
+
+  const arrayOfVowels = array.filter((char) => vowels.includes(char));
+
+  return arrayOfVowels.length;
+};
+
+console.log(countVowels("Hello World"));
+ */
+
+/* 
+// 21. Write a function that splits a string into an array of words based on spaces. 
+const splitWords = (string) => {
+    return string.split(' ')
+}
+
+console.log(splitWords("The quick brown fox"));
+ */
+
+/* 
+// 22. Write a function that performs a mathematical operation (`+`, `-`, `*`, `/`)
+// on two numbers.
+const calculate = (num1, num2, operator) => {
+  let result;
+
+  switch (operator) {
+    case "+":
+      result = num1 + num2;
+      break;
+    case "-":
+      result = num1 - num2;
+      break;
+    case "*":
+      result = num1 * num2;
+      break;
+    case "/":
+      result = num1 / num2;
+      break;
+    default:
+      result = "Invalid operator";
+  }
+
+  return result;
+};
+
+console.log(calculate(5, 3, "+"));
+console.log(calculate(5, 3, "%"));
+ */
